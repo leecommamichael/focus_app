@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:focus_app/pausable_timer.dart';
+import 'package:focus_app/task_page/pausable_timer.dart';
 
 class ClockDisplay extends StatefulWidget {
   final Duration timeToFocus;
@@ -40,25 +40,21 @@ class _ClockDisplayState extends State<ClockDisplay> {
     return Card(
         color: Theme.of(context).buttonColor,
         child: InkWell(
-          child: Column(
-            children: <Widget>[
+            child: Column(children: <Widget>[
               Text(
                 timerDisplay,
                 style: Theme.of(context).textTheme.display4,
               ),
               SizedBox(
-                height: 16,
-                child: LinearProgressIndicator(
-                  value: progressBarPortion,
-                  backgroundColor: Colors.transparent,
-                ),
-              ),
-            ],
-          ),
-          onTap: () {
-            clockTimer.toggle();
-          },
-        ));
+                  height: 16,
+                  child: LinearProgressIndicator(
+                    value: progressBarPortion,
+                    backgroundColor: Colors.transparent,
+                  ))
+            ]),
+            onTap: () {
+              clockTimer.toggle();
+            }));
   }
 
   @override

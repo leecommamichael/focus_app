@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:focus_app/timer_button.dart';
+import 'package:focus_app/task_page/timer_button.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+class TaskPage extends StatefulWidget {
+  TaskPage({Key key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _TaskPageState createState() => _TaskPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _TaskPageState extends State<TaskPage> {
   static const help = 'What are you working on?';
 
   Widget _subjectField() => FractionallySizedBox(
